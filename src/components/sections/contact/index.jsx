@@ -15,7 +15,7 @@ const Contact = () => {
           rel="noreferrer"
         >
           <FontAwesomeIcon
-            className="hover:scale-125 hover:text-primaryTitle transition-all"
+            className="hover:scale-125 hover:text-primaryTitle duration-500"
             icon={faGithub}
           />
         </a>
@@ -25,7 +25,7 @@ const Contact = () => {
           rel="noreferrer"
         >
           <FontAwesomeIcon
-            className="hover:scale-125 hover:text-primaryTitle transition-all"
+            className="hover:scale-125 hover:text-primaryTitle duration-500"
             icon={faLinkedin}
           />
         </a>
@@ -35,7 +35,7 @@ const Contact = () => {
           rel="noreferrer"
         >
           <FontAwesomeIcon
-            className="hover:scale-125 hover:text-primaryTitle transition-all"
+            className="hover:scale-125 hover:text-primaryTitle duration-500"
             icon={faFacebook}
           />
         </a>

@@ -1,93 +1,88 @@
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-unused-vars
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import FormattedDate from "../../formattedDate";
+import Picture from "../../picture";
+import TitleLink from "../../titleLink";
+import Material from "../../material";
+import Description from "../../description";
+import Tech from "../../tech";
+import ProjectPhoto from "../../../assets/github_profile.png";
 import {
   faGithub,
-  faMedium,
+  faSlack,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// eslint-disable-next-line no-unused-vars
-import picture from "../../../assets/github_profile.png";
+import { data } from "../../content/experience";
+import pics from "../../../assets/github_profile.png";
 const Experience = () => {
+  const SECTION_ID = "experience-section";
   return (
-    <div className="">
+    <div id={SECTION_ID} className="">
       <div className="text-primaryAccent font-medium pl-4 mb-4">Experience</div>
-      <div className="grid grid-cols-[25%_75%] rounded-md hover:bg-primarySubcontent transition-all py-4 px-4">
-        <div>
-          <div>
-            <span className="text-sm">2022-2023</span>
-          </div>
-          <div className="">
-            <img
-              src={picture}
-              alt=""
-              className=" mt-4 w-5/6 rounded-lg border-2 border-primaryContent"
-            />
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <div className="text-primaryAccent font-medium">Title</div>
-          <div className="flex gap-4 text-xl">
-            <a
-              href="https://youtu.be/DOUP5gwk2jI"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon
-                className="hover:scale-125 hover:text-primaryTitle transition-all"
-                icon={faGithub}
+
+      {data.map(
+        (
+          {
+            date = "",
+            title = "",
+            link = "",
+            materials = [],
+            descriptions = [],
+            frontend = [],
+            backend = [],
+            photo = "",
+          },
+          index
+        ) => (
+          <div
+            key={`${SECTION_ID}-${index}-${title.replaceAll(" ", "")}`}
+            className="grid grid-cols-[25%_75%] rounded-md hover:bg-primarySubcontent duration-500 py-4 px-4"
+          >
+            <div>
+              <FormattedDate key={`${date}-date-${index}`} date={date} />
+              <Picture
+                key={`${title}-picture-${index}`}
+                picture={photo}
+                title={title}
               />
-            </a>
-            <a
-              href="https://youtu.be/DOUP5gwk2jI"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon
-                className="hover:scale-125 hover:text-primaryTitle transition-all"
-                icon={faMedium}
+            </div>
+            <div className="grid gap-4">
+              <TitleLink
+                key={`${title}-name-${index}`}
+                title={title}
+                link={link}
               />
-            </a>
-            <a
-              href="https://youtu.be/DOUP5gwk2jI"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon
-                className="hover:scale-125 hover:text-primaryTitle transition-all"
-                icon={faYoutube}
-              />
-            </a>
+              <div className="flex gap-4 text-xl">
+                {materials.map((e, i) => (
+                  <Material
+                    key={`${e.type}-material-${i}`}
+                    icon={e.type}
+                    link={e.link}
+                  />
+                ))}
+              </div>
+
+              {descriptions.map((e, i) => (
+                <Description key={`description-${i}`} description={e} />
+              ))}
+
+              <div className="flex gap-0 ">
+                {frontend.map((e, i) => (
+                  <Tech key={`frontend-${e.title}-${i}`} data={e} />
+                ))}
+              </div>
+
+              <div className="flex gap-0  ">
+                {backend.map((e, i) => (
+                  <Tech key={`backend-${e.title}-${i}`} data={e} />
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="text-sm">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only
-            five centuries, but also the leap into electronic typesetting,
-          </div>
-          <div className="flex gap-4 text-sm">
-            <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-              <span className="rounded-lg  py-1 px-2 bg-primaryAccent text-primaryContent inline-block hover:text-primaryTitle">
-                <div>NextJS</div>
-              </span>
-            </a>
-            <a href="https://react.dev/" target="_blank" rel="noreferrer">
-              <span className="rounded-lg  py-1 px-2 bg-primaryAccent text-primaryContent inline-block hover:text-primaryTitle transition-all">
-                <div>React</div>
-              </span>
-            </a>
-            <a href="https://mui.com/" target="_blank" rel="noreferrer">
-              <span className="rounded-lg  py-1 px-2 bg-primaryAccent text-primaryContent inline-block hover:text-primaryTitle transition-all">
-                <div>MUi</div>
-              </span>
-            </a>
-            <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
-              <span className="rounded-lg  py-1 px-2 bg-primaryAccent text-primaryContent inline-block hover:text-primaryTitle transition-all">
-                <div>Tailwindcss</div>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
+        )
+      )}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 // eslint-disable-next-line no-unused-vars
 
 // eslint-disable-next-line no-unused-vars
@@ -10,23 +10,41 @@ const Header = () => {
   return (
     <>
       <div className="flex flex-col gap-2">
-        <div className="text-3xl text-primaryAccent font-medium">
-          {data.name}
-        </div>
-        <div className="text-primaryAccent font-medium">{data.title}</div>
-        <div className="text-sm w-5/6">{data.caption}</div>
-        <div className="mt-3">
-          <span className="rounded-lg bg-primaryTitle text-primaryAccent py-2 px-4">
-            <a href={data.link} target="_blank" rel="noreferrer">
-              {data.bthText}
-              <span className="rotate-90 inline-block ml-2">
-                <FontAwesomeIcon
-                  className="animate-bounce"
-                  icon={faArrowDown}
-                />
-              </span>
-            </a>
+        <div className="text-2xl font-medium relative group">
+          <span className="absolute blur-lg  group-hover:bg-primaryAccent duration-1000">
+            {data.name} dfdf
           </span>
+          <a
+            href="https://github.com/sekerblade"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="pb-2 bg-gradient-to-r from-primaryBase to-primaryTitle text-primaryAccent p-1 px-4 rounded-lg hover:text-primaryTitle duration-500 drop-shadow-md">
+              {data.name}
+              <FontAwesomeIcon
+                className="text-sm ml-3 mb-1 -rotate-45 animate-pulse"
+                icon={faArrowRight}
+              />
+            </span>
+          </a>
+        </div>
+        <div className="text-primaryAccent font-medium px-2 pt-3">
+          {data.title}
+        </div>
+        <div className="text-sm w-5/6 p-2 pb-3 ">{data.caption}</div>
+        <div className="relative group ">
+          <span className="absolute blur-lg  group-hover:bg-primaryAccent duration-1000">
+            ViddResumedfdfddf
+          </span>
+          <a href={data.link} target="_blank" rel="noreferrer">
+            <span className="rounded-lg bg-gradient-to-r from-primaryBase to-primaryTitle text-primaryAccent py-2 px-4 drop-shadow-md  hover:text-primaryTitle duration-500">
+              {data.bthText}
+              <FontAwesomeIcon
+                className="text-xs -rotate-45  ml-2 animate-pulse"
+                icon={faArrowRight}
+              />
+            </span>
+          </a>
         </div>
       </div>
     </>
