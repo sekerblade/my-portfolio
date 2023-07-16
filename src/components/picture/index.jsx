@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 const Picture = ({ picture, title }) => {
+  if (!picture) return null;
   return (
     <div>
       <div>

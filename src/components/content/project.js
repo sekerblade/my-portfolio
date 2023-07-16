@@ -8,7 +8,11 @@ import {
   faSlack,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import RscanPic from "../../assets/github_profile.png";
 
+import evan from "../../assets/789104.jpg";
+import naruto from "../../assets/790528.jpg";
+import bleach from "../../assets/bleach.jpg";
 import {
   faNetworkWired,
   faWalkieTalkie,
@@ -36,6 +40,7 @@ export const data = [
       { title: "NodeJs", link: "https://chat.openai.com/" },
       { title: "MySql", link: "https://chat.openai.com/" },
     ],
+    photo: bleach,
   },
   {
     date: "2019--2020",
@@ -61,6 +66,7 @@ export const data = [
       { title: "NodeJs", link: "https://chat.openai.com/" },
       { title: "MySql", link: "https://chat.openai.com/" },
     ],
+    photo: evan,
   },
   {
     date: "2019--2020",
@@ -84,6 +90,7 @@ export const data = [
       { title: "MySql", link: "https://chat.openai.com/" },
       { title: "Prisma", link: "https://chat.openai.com/" },
     ],
+    photo: naruto,
   },
   {
     date: "2020-2021",
@@ -109,5 +116,7 @@ export const data = [
       { title: "ExpressJs", link: "https://chat.openai.com/" },
       { title: "MongoDB", link: "https://chat.openai.com/" },
     ],
+
+    photo: RscanPic,
   },
 ];

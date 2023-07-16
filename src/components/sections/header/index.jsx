@@ -19,7 +19,7 @@ const Header = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <span className="pb-2 bg-gradient-to-r from-primaryBase to-primaryTitle text-primaryAccent p-1 px-4 rounded-lg hover:text-primaryTitle duration-500 drop-shadow-md">
+            <span className="rounded-lg bg-gradient-to-br from-primaryContent from-55% to-primaryTitle text-primaryAccent py-2 px-4 drop-shadow-md  hover:text-primaryTitle duration-500">
               {data.name}
               <FontAwesomeIcon
                 className="text-sm ml-3 mb-1 -rotate-45 animate-pulse"
@@ -37,7 +37,7 @@ const Header = () => {
             ViddResumedfdfddf
           </span>
           <a href={data.link} target="_blank" rel="noreferrer">
-            <span className="rounded-lg bg-gradient-to-r from-primaryBase to-primaryTitle text-primaryAccent py-2 px-4 drop-shadow-md  hover:text-primaryTitle duration-500">
+            <span className="rounded-lg bg-gradient-to-br from-primaryContent from-55% to-primaryTitle text-primaryAccent py-2 px-4 drop-shadow-md  hover:text-primaryTitle duration-500">
               {data.bthText}
               <FontAwesomeIcon
                 className="text-xs -rotate-45  ml-2 animate-pulse"
