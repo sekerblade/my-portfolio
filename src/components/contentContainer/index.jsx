@@ -9,7 +9,7 @@ import TitleLink from "../titleLink";
 const ContentContainer = ({ title: sectionTitle = "", data = [] }) => {
   const SECTION_ID = `${sectionTitle}-section`;
   return (
-    <div id={SECTION_ID} className="">
+    <div id={SECTION_ID} className="scroll-m-14">
       <div className="text-primaryAccent font-medium pl-4 mb-4">
         {sectionTitle}
       </div>

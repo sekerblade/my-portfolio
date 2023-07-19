@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 // eslint-disable-next-line no-unused-vars
 
 // eslint-disable-next-line no-unused-vars
@@ -11,20 +11,14 @@ const Header = () => {
     <>
       <div className="flex flex-col gap-2">
         <div className="text-2xl font-medium relative group">
-          <span className="absolute blur-lg  group-hover:bg-primaryAccent duration-1000">
-            {data.name} dfdf
-          </span>
           <a
             href="https://github.com/sekerblade"
             target="_blank"
             rel="noreferrer"
           >
-            <span className="rounded-lg bg-gradient-to-br from-primaryContent from-55% to-primaryTitle text-primaryAccent py-2 px-4 drop-shadow-md  hover:text-primaryTitle duration-500">
+            <span className="rounded-lg text-3xl  text-primaryAccent py-2 px-2 drop-shadow-md  hover:text-primaryTitle duration-500">
               {data.name}
-              <FontAwesomeIcon
-                className="text-sm ml-3 mb-1 -rotate-45 animate-pulse"
-                icon={faArrowRight}
-              />
+              <span></span>
             </span>
           </a>
         </div>
@@ -38,10 +32,11 @@ const Header = () => {
           </span>
           <a href={data.link} target="_blank" rel="noreferrer">
             <span className="rounded-lg bg-gradient-to-br from-primaryContent from-55% to-primaryTitle text-primaryAccent py-2 px-4 drop-shadow-md  hover:text-primaryTitle duration-500">
-              {data.bthText}
+              <span className=""> {data.bthText}</span>
+
               <FontAwesomeIcon
-                className="text-xs -rotate-45  ml-2 animate-pulse"
-                icon={faArrowRight}
+                className="text-xs  ml-2 animate-bounce "
+                icon={faArrowDown}
               />
             </span>
           </a>
