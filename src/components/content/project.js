@@ -10,13 +10,13 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import RscanPic from "../../assets/github_profile.png";
 
-import evan from "../../assets/789104.jpg";
-import naruto from "../../assets/790528.jpg";
-import bleach from "../../assets/bleach.jpg";
 import {
   faNetworkWired,
   faWalkieTalkie,
 } from "@fortawesome/free-solid-svg-icons";
+import evan from "../../assets/789104.jpg";
+import naruto from "../../assets/790528.jpg";
+import bleach from "../../assets/bleach.jpg";
 export const data = [
   {
     date: "2022-2033",
@@ -43,7 +43,7 @@ export const data = [
     photo: bleach,
   },
   {
-    date: "2019--2020",
+    date: "2019-2020",
     title: "Evangelion",
     link: "https://www.youtube.com/watch?v=13nSISwxrY4",
     materials: [
@@ -69,7 +69,7 @@ export const data = [
     photo: evan,
   },
   {
-    date: "2019--2020",
+    date: "2019-2020",
     title: "Naruto-Shippuden",
     link: "https://www.youtube.com/watch?v=-G9BqkgZXRA",
     materials: [

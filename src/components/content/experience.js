@@ -38,7 +38,7 @@ export const data = [
     ],
   },
   {
-    date: "2019--2020",
+    date: "2019-2020",
     title: "Evangelion",
     link: "https://www.youtube.com/watch?v=13nSISwxrY4",
     materials: [
@@ -63,7 +63,7 @@ export const data = [
     ],
   },
   {
-    date: "2019--2020",
+    date: "2019-2020",
     title: "Naruto-Shippuden",
     link: "https://www.youtube.com/watch?v=-G9BqkgZXRA",
     materials: [
